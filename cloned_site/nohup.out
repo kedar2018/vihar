@@ -1,0 +1,29 @@
+=> Booting Puma
+=> Rails 7.1.5.1 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 6.6.0 ("Return to Forever")
+* Ruby version: ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 190276
+* Listening on http://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 58.84.60.161 at 2025-07-04 13:55:04 +0000
+Cannot render console from 58.84.60.161! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/home.html.erb within layouts/application
+  [1m[36mImageUpload Load (0.3ms)[0m  [1m[34mSELECT "image_uploads".* FROM "image_uploads" ORDER BY "image_uploads"."created_at" DESC[0m
+  ↳ app/views/static/home.html.erb:17
+  Rendered static/home.html.erb within layouts/application (Duration: 15.1ms | Allocations: 6177)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6444)
+Completed 200 OK in 52ms (Views: 21.4ms | ActiveRecord: 3.4ms | Allocations: 17321)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2025-07-04 13:55:09 +0000 ===
+- Goodbye!
+Exiting

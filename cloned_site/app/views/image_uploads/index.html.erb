@@ -1,0 +1,9 @@
+<h2>Uploaded Images</h2>
+
+<% @uploads.each do |img| %>
+  <div class="mb-4">
+    <h5><%= img.title %></h5>
+    <img src="/images/thumbs/<%= img.filename %>" alt="<%= img.title %>" />
+  </div>
+<% end %>
+
