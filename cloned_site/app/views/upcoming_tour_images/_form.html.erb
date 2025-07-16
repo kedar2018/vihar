@@ -1,0 +1,25 @@
+<%= form_with(model: upcoming_tour_image, local: true, multipart: true) do |form| %>
+  <% if upcoming_tour_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(upcoming_tour_image.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+        <% upcoming_tour_image.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :image_file, "Choose Image" %>
+    <%= form.file_field :image_file, name: "image_file", class: "form-control" %>
+  </div>
+
+  <%= form.submit "Save Image", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,12 @@
+<div id="<%= dom_id upcoming_tour_image %>">
+  <p>
+    <strong>Title:</strong>
+    <%= upcoming_tour_image.title %>
+  </p>
+
+  <p>
+    <strong>Filename:</strong>
+    <%= upcoming_tour_image.filename %>
+  </p>
+<%=image_tag "/images/thumbs/#{upcoming_tour_image.filename}"%>
+</div>

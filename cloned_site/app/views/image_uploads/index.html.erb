@@ -4,6 +4,10 @@
   <div class="mb-4">
     <h5><%= img.title %></h5>
     <img src="/images/thumbs/<%= img.filename %>" alt="<%= img.title %>" />
+    <%#= link_to 'Delete', upload_path(img), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm mt-2' %>
+    <%#= link_to 'Delete',"destroy_image/#{img.id}", method: :get, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm mt-2' %>
+<%= link_to 'Delete', delete_image_upload_path(img), class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %>
+
   </div>
 <% end %>
 

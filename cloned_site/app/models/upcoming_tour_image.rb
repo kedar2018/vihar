@@ -1,0 +1,2 @@
+class UpcomingTourImage < ApplicationRecord
+end

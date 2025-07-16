@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @upcoming_tour_image %>
+
+<div>
+  <%= link_to "Edit this upcoming tour image", edit_upcoming_tour_image_path(@upcoming_tour_image) %> |
+  <%= link_to "Back to upcoming tour images", upcoming_tour_images_path %>
+
+  <%= button_to "Destroy this upcoming tour image", @upcoming_tour_image, method: :delete %>
+</div>

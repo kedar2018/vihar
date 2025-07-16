@@ -40,4 +40,20 @@ end
       render :new
     end
   end
+
+
+def delete
+  @upload = ImageUpload.find(params[:id])
+
+  file_path_thumb = Rails.root.join("public", "images", "thumbs", @upload.filename)
+  file_path_full  = Rails.root.join("public", "images", "fulls", @upload.filename)
+
+  File.delete(file_path_thumb) if File.exist?(file_path_thumb)
+  File.delete(file_path_full)  if File.exist?(file_path_full)
+
+  @upload.destroy
+
+  redirect_to image_uploads_path, notice: "Image deleted successfully."
+end
+
 end
