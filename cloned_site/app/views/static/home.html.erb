@@ -1,4 +1,4 @@
- 
+ <%array=['span-1','span-2','span-3']%>
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -10,9 +10,9 @@
 
 			<div class="item intro span-2" style="background-image: url('/images/logo.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
 			</div>
-
+			
 			<% @uploads.each do |img| %>
-			<article class="item thumb span-1">
+			<article class="item thumb <%= array.sample %>">
 				<h2><%= img.title %></h2>
 				<a href="/images/fulls/<%=img.filename%>" class="image"> 
 					<img src="/images/thumbs/<%= img.filename %>"/>
@@ -25,14 +25,8 @@
 		<!-- Items -->
 		<div class="items">
 			<% @uploads.each do |img| %>
-			<article class="item thumb span-1">
-				<h2><%= img.title %></h2>
-				<a href="/images/fulls/<%=img.filename%>" class="image"> 
-					<img src="/images/thumbs/<%= img.filename %>"/>
-				</a>
-			</article>
-
-			<article class="item thumb span-3"><h2><%=img.title%></h2>
+			
+			<article class="item thumb <%= array.sample %>"><h2><%=img.title%></h2>
 				<a href="/images/fulls/<%=img.filename%>" class="image">
 					<img src="/images/thumbs/<%=img.filename%>" alt=""/>
 				</a></article>
