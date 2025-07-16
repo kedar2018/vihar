@@ -1,64 +1,69 @@
  
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main">
+	<!-- Main -->
+	<section id="main">
 
-						<!-- Items -->
-							<div class="items">
+		<!-- Items -->
+		<div class="items">
 
-								<div class="item intro span-2" style="background-image: url('/images/logo.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
-								</div>
-
-  							<% @uploads.each do |img| %>
-								<article class="item thumb span-1">
-                                                                        <h2><%= img.title %></h2>
-                                                                        <a href="/images/fulls/<%=img.filename%>" class="image"> <img src="/images/thumbs/<%= img.filename %>"
-										</a>
-                                                                </article>
-  							<% end %>
-
-							</div>
-
-						<!-- Items -->
-							<div class="items">
- <% @uploads.each do |img| %>
-                                                                <article class="item thumb span-1">
-                                                                        <h2><%= img.title %></h2>
-                                                                        <a href="/images/fulls/<%=img.filename%>" class="image"> <img src="/images/thumbs/<%= img.filename %>"
-                                                                                </a>
-                                                                </article>
-                                                        
- <article class="item thumb span-3"><h2><%=img.title%></h2><a href="/images/fulls/<%=img.filename%>" class="image"><img src="/images/thumbs/<%=img.filename%>" alt=""></a></article>
-<% end %>
-
-
-							</div>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<section>
-						<h1><a style="font-size:xx-large" href="/upcomingtours">Upcoming Tours</a></h1>
-						</section>
-						<section>
-							<ul class="icons">
-							<a  style="font-size:xx-large"  href="/contactus">Contact Us</a>
-							</ul>
-							<ul class="copyright">
-							</ul>
-						</section>
-					</section>
-
+			<div class="item intro span-2" style="background-image: url('/images/logo.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
 			</div>
 
-		<!-- Scripts -->
-			<script src="/styles/js/jquery.min.js"></script>
-			<script src="/styles/js/jquery.poptrox.min.js"></script>
-			<script src="/styles/js/browser.min.js"></script>
-			<script src="/styles/js/breakpoints.min.js"></script>
-			<script src="/styles/js/util.js"></script>
-			<script src="/styles/js/main.js"></script>
+			<% @uploads.each do |img| %>
+			<article class="item thumb span-1">
+				<h2><%= img.title %></h2>
+				<a href="/images/fulls/<%=img.filename%>" class="image"> 
+					<img src="/images/thumbs/<%= img.filename %>"/>
+				</a>
+			</article>
+			<% end %>
+
+		</div>
+
+		<!-- Items -->
+		<div class="items">
+			<% @uploads.each do |img| %>
+			<article class="item thumb span-1">
+				<h2><%= img.title %></h2>
+				<a href="/images/fulls/<%=img.filename%>" class="image"> 
+					<img src="/images/thumbs/<%= img.filename %>"/>
+				</a>
+			</article>
+
+			<article class="item thumb span-3"><h2><%=img.title%></h2>
+				<a href="/images/fulls/<%=img.filename%>" class="image">
+					<img src="/images/thumbs/<%=img.filename%>" alt=""/>
+				</a></article>
+			<% end %>
+
+
+		</div>
+
+	</section>
+
+	<!-- Footer -->
+	<section id="footer">
+		<section>
+			<h1><a style="font-size:xx-large" href="/upcomingtours">Upcoming Tours</a></h1>
+		</section>
+		<section>
+			<ul class="icons">
+				<a  style="font-size:xx-large"  href="/contactus">Contact Us</a>
+			</ul>
+			<ul class="copyright">
+			</ul>
+		</section>
+	</section>
+
+</div>
+
+<!-- Scripts -->
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/jquery.poptrox.min.js"></script>
+<script src="/styles/js/browser.min.js"></script>
+<script src="/styles/js/breakpoints.min.js"></script>
+<script src="/styles/js/util.js"></script>
+<script src="/styles/js/main.js"></script>
 
